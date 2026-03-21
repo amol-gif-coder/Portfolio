@@ -23,11 +23,17 @@ header {
   backdrop-filter: blur(12px);
   position: sticky;
   top: 0;
+  z-index: 1000;
 }
 
 /* Nav */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 nav a {
-  margin-left: 25px;
+  margin-left: 20px;
   text-decoration: none;
   color: #e66b13;
   font-size: 15px;
@@ -44,36 +50,34 @@ nav a:hover {
   align-items: center;
   justify-content: space-between;
   padding: 80px 9%;
-  gap: 80px;
+  gap: 60px;
   flex-wrap: wrap;
 }
 
 /* LEFT SIDE */
 .hero-text {
   flex: 1;
+  min-width: 280px;
 }
 
 /* RIGHT SIDE */
 .hero-img {
   flex: 1;
   display: flex;
-  justify-content: flex-end; /* pushes image to right */
+  justify-content: flex-end;
+  min-width: 280px;
 }
 
-/* Image */
-
+/* Image FIX */
 .hero-img img {
   width: 100%;
-  max-width: 600x;
-  height: 300px;
-  object-fit: cover;
+  max-width: 400px; /* FIXED (was 600x ❌) */
+  height: auto;
   border-radius: 30px;
-} 
-
-/*.hero-text {
-  max-width: 500px;
+  object-fit: cover;
 }
 
+/* Heading */
 .hero h1 {
   font-size: 42px;
   font-weight: 600;
@@ -81,16 +85,8 @@ nav a:hover {
 }
 
 .hero p {
-  color: #94a3b8;
+  color: #64748b;
   margin-bottom: 25px;
-}
-
-/* Image */
-.hero img {
-  width: 300px;
-  border-radius: 20px;
-  object-fit: cover;
-  box-shadow: 0 10px 40px rgba(10, 58, 29, 0.6);
 }
 
 /* Button */
@@ -160,4 +156,53 @@ footer {
   padding: 25px;
   background: #c6c7c9;
   color: #64748b;
+}
+
+/* ========================= */
+/* 🔥 MOBILE RESPONSIVE FIX */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+  /* Header */
+  header {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  nav a {
+    margin: 8px;
+  }
+
+  /* Hero */
+  .hero {
+    flex-direction: column; /* stack */
+    text-align: center;
+    padding: 40px 5%;
+  }
+
+  .hero-img {
+    justify-content: center; /* center image */
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero-img img {
+    max-width: 250px;
+  }
+
+  section {
+    padding: 40px 5%;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
 }
