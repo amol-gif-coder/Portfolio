@@ -125,20 +125,20 @@ section h2 {
 
 .grid div {
   padding: 18px;
-  background: #c6c7c9;
+  background: #e3e3e5;
   border-radius: 14px;
   text-align: center;
   transition: 0.3s;
 }
 
 .grid div:hover {
-  background: #73c4e1;
+  background: #89c3db;
   transform: translateY(-4px);
 }
 
 /* Projects */
 .project {
-  background: #c6c7c9;
+  background: #e3e3e5;
   padding: 25px;
   border-radius: 16px;
   margin-bottom: 20px;
@@ -147,7 +147,7 @@ section h2 {
 
 .project:hover {
   transform: translateY(-5px);
-  background: #81c9e8;
+  background: #89c3db;
 }
 
 /* Footer */
